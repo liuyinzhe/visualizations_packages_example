@@ -73,14 +73,16 @@ fig.update_layout(
 
 
 
-
+# 网页方式预览
 #fig = px.box(df, y="total_bill",points="all")
 # fig.show()
 
-# Representation of figure as an HTML div string
-html_str = plotly.io.to_html(fig)
-# https://plotly.com/python-api-reference/generated/plotly.io.to_html.html
 
+
+# 保存到html
+# Representation of figure as an HTML div string
+# https://plotly.com/python-api-reference/generated/plotly.io.to_html.html
+html_str = plotly.io.to_html(fig)
 with open("depth_distribution.html",mode='w',encoding='utf-8') as out:
     out.write(html_str)
     
