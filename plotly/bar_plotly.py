@@ -24,6 +24,6 @@ fig = px.bar(
 html_str = plotly.io.to_html(fig)
 # https://plotly.com/python-api-reference/generated/plotly.io.to_html.html
 
-with open("bar.html",mode='w',encoding='utf-8') as out:
+with open("bar_plotly.html",mode='w',encoding='utf-8') as out:
     out.write(html_str)
     
