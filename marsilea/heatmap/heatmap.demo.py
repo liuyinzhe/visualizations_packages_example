@@ -51,5 +51,12 @@ h = ma.Heatmap(data, width=3, height=3)
 h.render()
 plt.savefig("plot.pdf", bbox_inches="tight")
 '''
+'''
+savefig(fname, *, transparent=None, dpi='figure', format=None,
+        metadata=None, bbox_inches=None, pad_inches=0.1,
+        facecolor='auto', edgecolor='auto', backend=None,
+        **kwargs
+       )
+'''
 h.save("heatmap.png")
 h.save("heatmap.pdf")
