@@ -65,6 +65,7 @@ h.add_top(cell_exp, pad=0.1, size=0.75, name="exp") # cell_exp 小提琴图
 h.add_left(cell_types)  # cell_types 文字标签
 h.add_bottom(gene_names) # gene_names 文字标签
 
+# Grouping
 # 根据 cell_cat 中两个类型,排序并分割为热图的两部分
 '''
 cell_cat = ["Lymphoid", "Myeloid", "Lymphoid", "Lymphoid",
