@@ -65,13 +65,13 @@ h.add_top(cell_exp, pad=0.1, size=0.75, name="exp") # cell_exp 小提琴图
 h.add_left(cell_types)  # cell_types 文字标签
 h.add_bottom(gene_names) # gene_names 文字标签
 
-# Grouping
 # 根据 cell_cat 中两个类型,排序并分割为热图的两部分
 '''
 cell_cat = ["Lymphoid", "Myeloid", "Lymphoid", "Lymphoid",
       "Lymphoid", "Myeloid", "Myeloid", "Myeloid"]
 '''
-h.hsplit(labels=cell_cat, order=["Lymphoid", "Myeloid"])
+h.group_rows(group=cell_cat, order=["Lymphoid", "Myeloid"]) 
+#h.hsplit(labels=cell_cat, order=["Lymphoid", "Myeloid"])
 # 先分割hsplit,然后添加Chunk,分类标签(条形颜色)
 h.add_left(mp.Chunk(["Lymphoid", "Myeloid"], ["#33A6B8", "#B481BB"]), pad=0.05)
 
