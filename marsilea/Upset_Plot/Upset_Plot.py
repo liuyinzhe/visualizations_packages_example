@@ -34,6 +34,7 @@ items_attrs = imdb[
     ]
 ].set_index("Title")
 
+
 '''
 print(items_attrs)
 # 取了额外列信息 "Revenue (Millions)" 做分布散点图
@@ -53,6 +54,23 @@ Search Party             2014                 93     5.6    4881                
 Nine Lives               2016                 87     5.3   12435               19.64         11
 
 [999 rows x 6 columns]
+'''
+
+'''
+print(imdb["Title"])
+0      Guardians of the Galaxy
+1                   Prometheus
+2                        Split
+3                         Sing
+4                Suicide Squad
+                ...
+994       Secret in Their Eyes
+995            Hostel: Part II
+996     Step Up 2: The Streets
+997               Search Party
+998                 Nine Lives
+Name: Title, Length: 999, dtype: object
+<class 'marsilea.upset.UpsetData'>
 '''
 
 '''
