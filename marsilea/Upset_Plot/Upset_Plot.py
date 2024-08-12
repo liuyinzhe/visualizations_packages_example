@@ -109,6 +109,10 @@ data = UpsetData.from_sets(sets=[[1, 2, 3, 4],
                             [3, 4, 5, 6],
                             [1, 6, 10, 11]]
                        , sets_names=["setA", "setB", "setC"])
+#data = UpsetData.from_sets(sets=[['A', 'B', 'C', 'D'],
+#                            ['C', 'D', 'E', 'F'],
+#                            ['A', 'E', 'G', 'R']]
+#                       , sets_names=["set1", "set2", "set3"])
 us = Upset(data)
 us.render()
 us.save("Upset_Plot.png")
