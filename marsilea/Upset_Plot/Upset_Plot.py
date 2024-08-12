@@ -34,9 +34,85 @@ items_attrs = imdb[
     ]
 ].set_index("Title")
 
+'''
+print(items_attrs)
+# 取了额外列信息 "Revenue (Millions)" 做分布散点图
+# 取了额外列信息 "Rating" 做了箱式图
+                         Year  Runtime (Minutes)  Rating   Votes  Revenue (Millions)  Metascore
+Title
+Guardians of the Galaxy  2014                121     8.1  757074              333.13         76
+Prometheus               2012                124     7.0  485820              126.46         65
+Split                    2016                117     7.3  157606              138.12         62
+Sing                     2016                108     7.2   60545              270.32         59
+Suicide Squad            2016                123     6.2  393727              325.02         40
+...                       ...                ...     ...     ...                 ...        ...
+Secret in Their Eyes     2015                111     6.2   27585                0.00         45
+Hostel: Part II          2007                 94     5.5   73152               17.54         46
+Step Up 2: The Streets   2008                 98     6.2   70699               58.01         50
+Search Party             2014                 93     5.6    4881                0.00         22
+Nine Lives               2016                 87     5.3   12435               19.64         11
+
+[999 rows x 6 columns]
+'''
+
+'''
+marsilea.upset.UpsetData.from_memberships()
+# items  [groupA,groupB，groupC]
+# items_names  统计的元素
+Parameters:
+      items
+            array of array of sets_names, dict
+            The data of items
+
+      items_names
+            optional
+            The name of items, if name is not provided, it will be automatically named as “Item 1, Item 2, …”
+
+      sets_attrs
+            optional, pd.DataFrame
+            The attributes of sets, the input index should be the same as sets_names
+
+      items_attrs
+            optional, pd.DataFrame
+            The attributes of items, the input index should be the same as items
+'''
+
 upset_data = UpsetData.from_memberships(
     imdb.Genre.str.split(","), items_names=imdb["Title"], items_attrs=items_attrs
 )
+
+# 第二种读取例子
+#marsilea.upset.UpsetData.from_sets()
+'''
+Parameters:
+
+sets
+    array of sets, dict
+    The sets data
+
+sets_names
+    optional
+    The name of sets, if name is not provided, it will be automatically named as “Set 1, Set 2, …”
+
+sets_attrs
+    optional, pd.DataFrame
+    The attributes of sets, the input index should be the same as sets_names
+
+items_attrs
+    optional, pd.DataFrame
+    The attributes of items, the input index should be the same as items
+'''
+'''
+
+from marsilea.upset import UpsetData, Upset
+data = UpsetData.from_sets(sets=[[1, 2, 3, 4],
+                            [3, 4, 5, 6],
+                            [1, 6, 10, 11]]
+                       , sets_names=["setA", "setB", "setC"])
+us = Upset(data)
+us.render()
+us.save("Upset_Plot.png")
+'''
 
 # Upset Plot
 # marsilea.upset.Upset
