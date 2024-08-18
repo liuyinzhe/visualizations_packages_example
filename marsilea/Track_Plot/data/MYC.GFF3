@@ -1,10 +1,5 @@
 ##gff-version 3
-#description: evidence-based annotation of the mouse genome (GRCm39), version M35 (Ensembl 112)
-#provider: GENCODE
-#contact: gencode-help@ebi.ac.uk
 #format: gff3
-#date: 2024-02-27
-##sequence-region chr8 1 195154279
 chr8	ENSEMBL	gene	3172239	3172348	.	+	.	ID=ENSMUSG00000064842.3;gene_id=ENSMUSG00000064842.3;gene_type=snRNA;gene_name=Gm26206;level=3;mgi_id=MGI:5455983
 chr8	ENSEMBL	transcript	3172239	3172348	.	+	.	ID=ENSMUST00000082908.3;Parent=ENSMUSG00000064842.3;gene_id=ENSMUSG00000064842.3;transcript_id=ENSMUST00000082908.3;gene_type=snRNA;gene_name=Gm26206;transcript_type=snRNA;transcript_name=Gm26206-201;level=3;transcript_support_level=NA;mgi_id=MGI:5455983;tag=basic,Ensembl_canonical
 chr8	ENSEMBL	exon	3172239	3172348	.	+	.	ID=exon:ENSMUST00000082908.3:1;Parent=ENSMUST00000082908.3;gene_id=ENSMUSG00000064842.3;transcript_id=ENSMUST00000082908.3;gene_type=snRNA;gene_name=Gm26206;transcript_type=snRNA;transcript_name=Gm26206-201;exon_number=1;exon_id=ENSMUSE00000522066.2;level=3;transcript_support_level=NA;mgi_id=MGI:5455983;tag=basic,Ensembl_canonical
