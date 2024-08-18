@@ -124,6 +124,12 @@ pdata["enz"] = pdata["enz"].replace("INPUT", "Background")
 # 根据两个名字排序,index 重新设置,drop = True  有内容的index 也会被删除,变为纯数字index
 pdata = pdata.sort_values(["enz", "cond"]).reset_index(drop=True)
 
+# 保存数据,实际分析时可以不下载数据
+save_pdata_path = Path("data/GSE137105_RAW/pdata.ftr")
+pdata.to_feather(save_pdata_path)
+# 以上内容可以直接删除,从这行开始
+pdata = pd.read_feather(save_pdata_path)
+
 '''
 print(pdata)
       cond         enz                                              track
